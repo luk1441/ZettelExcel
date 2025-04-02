@@ -4,7 +4,19 @@ toBeChanged
 ## License
 This project is licensed under the European Union Public Licence 1.2 (EUPL-1.2). See the [LICENSE](LICENSE) file for details.
 
-## Prjektauftrag
+### Benamung
+
+- Programmierung - Englisch
+- Kommentare - Deutsch
+- Website Sprache - Deutsch
+
+### Programmierung Benamung
+
+- HTML, CSS - kebab-case: my-variable-name
+- Python - snake_case: my_variable_name
+- Konstanten - Screaming Snake Case: SCREAMING_SNAKE_CASE
+
+## Projektauftrag
 Projektname: ZettelExcel  
 
 Kurzbeschreibung: 
