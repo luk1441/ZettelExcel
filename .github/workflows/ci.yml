@@ -25,4 +25,4 @@ jobs:
 
       - name: Run tests and enforce coverage threshold
         run: |
-          pytest --cov=src src/tests --cov-fail-under=80
+          PYTHONPATH=src pytest --cov=src src/tests --cov-fail-under=80
