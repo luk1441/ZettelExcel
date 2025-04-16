@@ -3,4 +3,4 @@ def add(a, b):
 
 # Beispiel-Aufruf:
 result = add(3, 5)
-print("The Result is:", result)
+print("The Result is: ", result)
