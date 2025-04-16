@@ -43,4 +43,5 @@ jobs:
 
     - name: Tests ausführen
       run: |
-        pytest
+        coverage run -m pytest
+        coverage report --fail-under=80
