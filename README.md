@@ -1,5 +1,4 @@
 # ZettelExcel
-toBeChanged
 
 ## License
 This project is licensed under the European Union Public Licence 1.2 (EUPL-1.2). See the [LICENSE](LICENSE) file for details.
@@ -12,9 +11,11 @@ This project is licensed under the European Union Public Licence 1.2 (EUPL-1.2).
 
 ### Programmierung Benamung
 
-- HTML, CSS - kebab-case: my-variable-name
-- Python - snake_case: my_variable_name
+- HTML, CSS, HTML Dateien, CSS Dateien, Javascript Dateien - kebab-case: 
+  my-variable-name
+- Python, Python Dateien - snake_case: my_variable_name
 - Konstanten - Screaming Snake Case: SCREAMING_SNAKE_CASE
+- Javascript - camelCase: myVariableName
 
 ## Projektauftrag
 Projektname: ZettelExcel  
