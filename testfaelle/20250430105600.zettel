@@ -1,0 +1,50 @@
+id: 20250430105600
+title: Test 1 für #24 [Automatische Umwandlung von Excel-Tabellen in Markdown-Format zur Zettelübernahme]
+role: test
+syntax: zmk
+created: 20250430105617
+modified: 20250430112353
+
+**Ziel:**
+
+Es soll geprüft werden, ob eine korrekt formatierte `.xlsx`-Datei automatisch in eine gültige Markdown-Tabelle umgewandelt wird, die ohne Nachbearbeitung in einen Zettel übernommen werden kann.
+
+**Voraussetzungen:**
+
+- Die Anwendung ist geöffnet.
+- Der Nutzer befindet sich auf der Seite zur Datei-Umwandlung.
+- Die Testdatei `test_tabelle.xlsx` ist lokal verfügbar.
+
+**Testdaten:**
+
+| =Eingabe            | Beschreibung                         |
+|---------------------|--------------------------------------|
+| `test_tabelle.xlsx` | Excel-Datei mit zwei Spalten: Name, Alter |
+
+**Inhalt der Datei:**
+
+| Name | Alter |
+|------|-------|
+| Max  | 23    |
+
+**Testschritte:**
+
+1. Klicke auf "Datei auswählen" und wähle `test_tabelle.xlsx`.
+2. Klicke auf "In Markdown umwandeln".
+3. Beobachte die angezeigte Markdown-Tabelle.
+
+**Erwartetes Ergebnis:**
+
+Nach dem Klick auf „In Markdown umwandeln“ wird eine Markdown-Tabelle angezeigt, die exakt den Inhalt der Excel-Datei wiedergibt. Dabei:
+enthält die erste Zeile der Markdown-Tabelle die Spaltenüberschriften aus der Excel-Datei,
+folgt direkt darunter eine Trennzeile mit Bindestrichen (für jede Spalte),
+sind alle weiteren Zeilen Datenzeilen mit denselben Spalten in derselben Reihenfolge,
+sind alle Zellen mit senkrechten Strichen (|) voneinander getrennt,
+entspricht die Anzahl und Reihenfolge der Spalten exakt der Originaldatei,
+wird kein zusätzlicher Text oder Fehlerhinweis ausgegeben.
+Außerdem erscheint unterhalb der Tabelle eine Schaltfläche mit der Aufschrift „Markdown kopieren“. Ein Klick auf diese Schaltfläche kopiert die generierte Markdown-Tabelle vollständig und fehlerfrei in die Zwischenablage.
+Beispielausgabe (sichtbar im Interface):
+
+| Name | Alter |
+|------|-------|
+| Max  | 23    |
