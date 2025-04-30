@@ -1,0 +1,18 @@
+id: 20250430105900
+title: Test 2 für # 14: FA-06: Sz Tabellen aus Zettel extrahieren
+role: test
+syntax: zmk
+created: 20250430105900
+prequel: 20250430107800
+
+**Ziel:**
+
+Sz Zettel content wird eine Tabelle extrahiert
+
+**Testschritte:**
+
+1. (BLOCK (PARA (TEXT "Im not a")) (TABLE ((CELL (TEXT "name")) (CELL (TEXT "age"))) ((CELL (TEXT "even")) (CELL (TEXT "52")))) (PARA (TEXT "Table")) (TABLE ((CELL (TEXT "name")) (CELL (TEXT "age"))) ((CELL (TEXT "bran")) (CELL (TEXT "33")))) (PARA (TEXT "eee")))
+
+**Erwartetes Ergebnis:**
+
+Die Funktion gibt ['TABLE ((CELL (TEXT "name")) (CELL (TEXT "age"))) ((CELL (TEXT "even")) (CELL (TEXT "52")))', 'TABLE ((CELL (TEXT "name")) (CELL (TEXT "age"))) ((CELL (TEXT "bran")) (CELL (TEXT "33")))'] zurück
