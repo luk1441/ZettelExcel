@@ -1,0 +1,22 @@
+id: 20250430105300
+title: Test 1 für #17: Markdown-Tabelle in Tabellen konvertieren
+role: test
+syntax: zmk
+created: 20250430105322
+modified: 20250430114421
+
+Ziel:
+Überprüfen, ob das System bei fehlerhaftem oder fehlendem Markdown-Input korrekt reagiert.
+
+Voraussetzungen:  
+- System ist lauffähig
+- Schnittstelle zur API ist eingerichtet
+
+Testschritte: 
+1. Sende über die API einen fehlerhaften Markdown-String (z. B. mit unvollständiger Tabellenstruktur).
+2. Beobachte das Verhalten des Systems.
+3. Sende anschließend einen leeren oder `null`-Markdown-String.
+
+Erwartetes Ergebnis:  
+- Bei fehlerhaftem Markdown wird eine aussagekräftige Fehlermeldung angezeigt.  
+- Bei fehlendem Markdown wird ebenfalls eine Fehlermeldung angezeigt.
