@@ -1,0 +1,29 @@
+id: 20250430114201
+title: Test 2 für #05: Zettel von Zettelstore bekommen
+role: test
+syntax: zmk
+created: 20250430114201
+prequel: 20250430114202
+sequel: 20250430114200
+
+
+*Ziel:*
+
+Es soll ein Fehler ausgegeben werden, sobald eine Anfrage an den Zettelstore gestellt wird, die angefragte Zettelnummer jedoch nicht vorhanden oder ungültig ist.
+
+*Voraussetzungen:*
+
+Die Zettelnummer ist nicht vorhanden oder ungültig
+Eine ungültige Zettelnummer liegt dann vor, wenn die Nummer mehr oder weniger als 16 Ziffern und/oder keine Ziffern von 0-9 verwendet wurden
+
+*Testdaten:*
+
+ungültige/nicht vorhandene Zettelnummer
+
+*Testschritt:*
+
+GET request für Zettel Body von ZettelNummer und ZettelStore nicht aktiv
+
+*Erwartetes Ergebnis:*
+
+Fehler, da ZettelNummer nicht vorhanden

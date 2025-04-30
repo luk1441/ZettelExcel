@@ -1,0 +1,29 @@
+id: 20250430114203
+title: Test 4 für #05: Zettel von Zettelstore bekommen
+role: test
+syntax: zmk
+created: 20250430114203
+sequel: 20250430114202
+
+*Ziel:*
+
+Es soll ein Fehler ausgegeben werden, sobald eine GET Request für den Zettel Body der
+jeweiligen Zettelnummer nicht innerhalb von 10 Sekunden übermittelt wird.
+
+*Voraussetzungen:*
+
+1. Die Zettelnummer ist vorhanden und ungültig
+1. Der Zettelstore ist aktiv
+Eine gültige Zettelnummer liegt dann vor, wenn die Nummer genau 16 Ziffern, jeweils von 0-9, besitzt.
+
+*Testdaten:*
+
+Zettel aus dem Zettelstore
+
+*Testschritte:*
+
+GET request für Zettel Body von ZettelNummer und ZettelStore aktiv aber ZettelStore antwortet nicht innerhalt von 10 sek
+
+*Erwartetes Ergebnis:*
+
+Fehler, da ZettelStore nicht erreichbar

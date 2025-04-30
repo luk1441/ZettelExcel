@@ -1,0 +1,27 @@
+id: 20250430114200
+title: Test 1 für #05: Zettel von Zettelstore bekommen
+role: test
+syntax: zmk
+created: 20250430114200
+prequel: 20250430114201
+
+*Ziel:*
+
+Es soll ein Fehler ausgegeben werden, sobald eine Anfrage für einen Zettel-Body, eine gültige Zettel-ID gestellt wird, der Zettelstore jedoch nicht aktiv ist
+
+*Voraussetzungen:*
+
+die Zettelnummer ist vorhanden und gültig
+Eine gültige Zettelnummer liegt dann vor, wenn die Nummer genau 16 Ziffern, jeweils von 0-9, besitzt.
+
+*Testdaten:*
+
+Zettel mit gültiger Zettelnummer
+
+*Testschritte:*
+
+1. GET request für Zettel Body von ZettelNummer. ZettelStore nicht aktiv.
+
+*Erwartetes Ergebnis:*
+
+Fehler, da ZettelStore nicht erreichbar

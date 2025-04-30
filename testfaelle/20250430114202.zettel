@@ -1,0 +1,30 @@
+id: 20250430114202
+title: Test 3 für #05: Zettel von Zettelstore bekommen
+role: test
+syntax: zmk
+created: 20250430114202
+prequel: 20250430114203
+sequel: 20240329151001
+
+
+*Ziel:*
+
+Auf eine GET request vom Zettelstore kommt der ZettelBody als response
+
+*Voraussetzungen:*
+
+1. Die Zettelnummer ist gültig
+1. Der Zettelstore ist aktiv
+Eine gültige Zettelnummer liegt dann vor, wenn die Nummer genau 16 Ziffern, jeweils von 0-9, besitzt.
+
+*Testdaten:*
+
+Zettel aus dem Zettelstore
+
+*Testschritte:*
+
+GET request für Zettel Body von existierender ZettelNummer und ZettelStore ist aktiv
+
+*Erwartetes Ergebnis:*
+
+Zettel Body Content kommt in der response
