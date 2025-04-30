@@ -1,0 +1,33 @@
+id: 20250430113756
+title: Test 2 für #21: Excel Tabellen in Tabellen konvertieren
+role: test
+syntax: zmk
+created: 20250430113756
+modified: 20250430114530
+prequel: 20250430111400
+
+**Ziel:** Überprüfen, wie der Zettelstore mit leeren Zellen in Excel umgeht.
+
+**Voraussetzung:**
+- Der Zettelstore ist geöffnet.
+- Excel-Datei `test_tabelle_leer.xlsx` enthält:
+
+| Produkt | Preis | Lager |
+|---------|-------|-------|
+| Apfel   | 1,20  | 30    |
+| Banane  |       | 10    |
+| Orange  | 1,00  |       |
+
+**Testschritte:**
+
+1. Öffne den Zettelstore.
+2. Importiere `test_tabelle_leer.xlsx`.
+3. Prüfe, wie leere Zellen dargestellt werden.
+
+**Erwartetes Ergebnis:**
+Markdown-Tabelle wird korrekt dargestellt mit leeren Zellen, z. B.:
+| Produkt | Preis | Lager |
+|---------|-------|-------|
+| Apfel   | 1,20  | 30    |
+| Banane  |       | 10    |
+| Orange  | 1,00  |       |

@@ -1,0 +1,18 @@
+id: 20250430113600
+title: Test 2 für #17: Markdown-Tabelle in Tabellen konvertieren
+role: test
+syntax: zmk
+created: 20250430113612
+modified: 20250430114431
+prequel: 20250430105300
+
+Ziel: Überprüfen, ob bei mehreren Tabellen im Markdown-String alle Tabellen korrekt extrahiert und jeweils einzeln verarbeitet werden.
+
+Voraussetzungen:
+- System ist lauffähig - API liefert Markdown mit mehreren Tabellen
+
+Testschritte:
+1. Stelle über die API einen Markdown-String bereit, der zwei oder mehr korrekt formatierte Tabellen enthält. 2. Lasse das System den Markdown-String verarbeiten. 3. Untersuche das Resultat (z. B. über Debug-Ausgabe oder gespeicherte Pandas-Objekte).
+
+Erwartetes Ergebnis:
+- Das System erzeugt für jede erkannte Tabelle ein separates Pandas-DataFrame. - Die Inhalte der Tabellen sind korrekt übernommen.
