@@ -1,0 +1,37 @@
+id: 20250430112600
+title: Test 2 für #25: Zusammengesetzter Zettel aktualisieren
+role: test
+syntax: zmk
+created: 20250430112609
+prequel: 20250430104700
+
+**Ziel:**\
+Überprüfung, ob die Anwendung erwartungsgemäß reagiert, wenn der ZettelStore beim Aktualisieren des Zettels nicht erreichbar ist.
+
+**Testdaten:**\
+- ZettelStore-URL: http://localhost:23123/\
+- Zettel-ID: 20250430000123\
+- Excel-Datei: zettel_inhalte.xlsx mit bearbeiteten Werten\
+- CLI-Befehl:\
+> python main_end.py --import zettel_inhalte.xlsx --zettel-id 20250430000\
+
+**Testvoraussetzungen:**\
+Es wurde eine gültige Excel-Datei erstellt und gespeichert.\
+Die Zettel-ID ist bekannt.\
+Der ZettelStore-Server wird bewusst deaktiviert (z. B. durch Deaktivieren des Netzwerks oder Stoppen des Servers).
+
+**Testschritte:** \
+1. Stelle sicher, dass der ZettelStore nicht läuft (z. B. Dienst beenden oder Internetverbindung trennen).\
+2. Stelle sicher, dass die Excel-Datei korrekt gespeichert ist.\
+3. Öffne das Terminal. \
+4. Führe den Befehl aus:
+> python main_end.py --import zettel_inhalte.xlsx --zettel-id 20250430000123\
+5. Beobachte die Terminalausgabe.\
+
+**Erwartetes Ergebnis:**\
+- Terminalausgabe zeigt eine klare Fehlermeldung wie:\
+> Fehler: ZettelStore nicht erreichbar\
+- oder:\
+> ConnectionError: Failed to connect to ZettelStore\
+- Es erfolgt kein unkontrollierter Absturz der Anwendung.\
+- Der Nutzer wird informiert, dass die Verbindung fehlschlug und der Zettel nicht aktualisiert wurde.
