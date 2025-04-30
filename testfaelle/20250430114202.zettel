@@ -7,24 +7,24 @@ prequel: 20250430114203
 sequel: 20240329151001
 
 
-*Ziel:*
+**Ziel:**
 
 Auf eine GET request vom Zettelstore kommt der ZettelBody als response
 
-*Voraussetzungen:*
+**Voraussetzungen:**
 
 1. Die Zettelnummer ist gültig
 1. Der Zettelstore ist aktiv
 Eine gültige Zettelnummer liegt dann vor, wenn die Nummer genau 16 Ziffern, jeweils von 0-9, besitzt.
 
-*Testdaten:*
+**Testdaten:**
 
 Zettel aus dem Zettelstore
 
-*Testschritte:*
+**Testschritte:**
 
 GET request für Zettel Body von existierender ZettelNummer und ZettelStore ist aktiv
 
-*Erwartetes Ergebnis:*
+**Erwartetes Ergebnis:**
 
 Zettel Body Content kommt in der response
