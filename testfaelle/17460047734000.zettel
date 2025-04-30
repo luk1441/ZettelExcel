@@ -1,0 +1,26 @@
+id: 17460047734000
+title: Test 2 für # 13: FA-04: Zettelnummer Guard
+role: test
+syntax: zmk
+created: 17460047734000
+prequel: 17460046716000
+
+**Ziel:**
+
+Valide Nummern werden als mögliche Zettelnummer gekennzeichnet
+
+**Voraussetzungen:**
+
+- Nummer wird eingegeben
+
+**Testschritte:**
+
+1. 12345678901234567 wird eingegeben
+
+**Erwartetes Ergebnis:**
+
+Die Funktion gibt true zurück
+
+**Besonderheiten**
+
+Es wird nur getestet, ob die Nummer eine Zettelnummer sein könnte. Es wird nicht wirklich im ZettelStore nachgeschaut, ob nummer existiert und valide ist.
