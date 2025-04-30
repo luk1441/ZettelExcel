@@ -1,0 +1,60 @@
+id: 20250430112900
+title: Test 2 für #24 [Automatische Umwandlung von Excel-Tabellen in Markdown-Format zur Zettelübernahme]
+role: test
+syntax: zmk
+created: 20250430112921
+prequel: 20250430105600
+
+**Ziel:**
+
+Es soll geprüft werden, ob eine `.xlsx`-Datei mit mehreren Datenzeilen korrekt in eine vollständige Markdown-Tabelle umgewandelt wird.
+
+**Voraussetzungen:**
+
+- Die Anwendung ist gestartet.
+- Der Benutzer befindet sich auf der Umwandlungsseite.
+- Die Testdatei `personen.xlsx` ist lokal verfügbar.
+
+**Testdaten:**
+
+| =Eingabe           | Beschreibung                                      |
+|--------------------|---------------------------------------------------|
+| `personen.xlsx`    | Excel-Datei mit Spalten "Name", "Alter" und drei Datenzeilen |
+
+**Inhalt der Datei:**
+
+| Name | Alter |
+|------|-------|
+| Max  | 23    |
+| Lara | 31    |
+| Ben  | 29    |
+
+**Testschritte:**
+
+1. Klicke auf „Datei auswählen“ und wähle `personen.xlsx`.
+2. Klicke auf „In Markdown umwandeln“.
+3. Beobachte die angezeigte Markdown-Ausgabe.
+4. Klicke auf „Markdown kopieren“.
+5. Füge den kopierten Text z. B. in einen Editor ein.
+
+**Erwartetes Ergebnis:**
+
+Die Anwendung zeigt die folgende Markdown-Tabelle (sowohl auf der Seite als auch beim Einfügen aus der Zwischenablage):
+
+
+Name	Alter
+Max	23
+Lara	31
+Ben	29
+
+**In Textform:**
+
+> Senkrecht getrennte Tabelle mit zwei Spalten („Name“ und „Alter“), drei korrekt übertragenen Datenzeilen und einer Markdown-Trennzeile. Die Spaltenüberschriften stimmen mit der ersten Zeile der Excel-Datei überein.  
+> Keine zusätzlichen Leerzeilen, kein Formatierungsfehler.  
+> Die Ausgabe kann ohne Änderungen in einen Markdown-Zettel übernommen werden.
+
+Außerdem erscheint eine Schaltfläche **„Markdown kopieren“**, mit der der generierte Text in die Zwischenablage kopiert werden kann. Der eingefügte Text ist identisch mit der Anzeige.
+
+---
+
+Möchtest du jetzt auch noch **Test 3** für einen Sonderfall, z. B. eine leere Datei oder fehlende Kopfzeile?

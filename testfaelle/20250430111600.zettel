@@ -1,0 +1,24 @@
+id: 20250430111600
+title: Test 2 für # 3 Tabellendaten in Excel exportieren
+role: test
+syntax: zmk
+created: 20250430111659
+modified: 20250430112740
+prequel: 20250430111300
+
+Ziel:
+
+Es soll geprüft werden, ob eine leere Tabelle aus einem Zettel erfolgreich in eine leere Excel-Datei exportiert wird.
+
+
+Testdaten:
+
+| =Eingabe           | Beschreibung             |
+| ⁠ Zettel id = 0000000000123457  | 	Zettel mit einer leeren Tabelle   |
+| 
+
+
+Erwartetes Ergebnis:
+
+Excel Datei wird erstellt, das Tabellenblatt ist leer 
+Keine Fehlermeldung erscheint
