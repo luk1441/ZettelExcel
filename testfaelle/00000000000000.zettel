@@ -1,0 +1,29 @@
+id: 0000000000000
+title: Test [nummer] für # [Issue Nummer]: [Titel Anforderung]
+role: test
+syntax: zmk
+created: 00000000000000
+prequel: 0000000000000
+sequel: 0000000000000
+
+**Ziel:**
+
+Beschreibe kurz, was mit dem Test geprüft wird.
+
+**Voraussetzungen:**
+
+- [Beschreibe Vorraussetzungen]
+
+**Testdaten:**
+
+| =Eingabe           | Beschreibung             |
+| `username=test`  | Gültiger Benutzername     |
+| `password=1234`  | Einfaches Passwort        |
+
+**Testschritte:**
+
+1. [Aktionen]
+
+**Erwartetes Ergebnis:**
+
+Beschreibe das erwartete Verhalten
