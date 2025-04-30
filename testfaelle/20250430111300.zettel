@@ -1,0 +1,24 @@
+id: 20250430111300
+title: Test 1 für # 3 Tabellendaten in Excel exportieren
+role: test
+syntax: zmk
+created: 20250430111346
+modified: 20250430112709
+
+Ziel:
+
+Es soll geprüft werden, ob eine gültige Tabelle aus einem Zettel erfolgreich in eine Excel Datei exportiert wird
+
+
+
+Testdaten:
+
+| =Eingabe           | Beschreibung             |
+| ⁠ Zettel id = 0000000000123456⁠  | 	Zettel enthält eine gültige Tabelle    |
+| 
+
+
+
+Erwartetes Ergebnis:
+
+Excel Datei wird erstellt, Tabellendaten werden vollständig übernommen
