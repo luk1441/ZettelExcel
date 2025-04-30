@@ -1,0 +1,33 @@
+id: 20250430111400
+title: Test 1 für #21: Excel Tabellen in Tabellen konvertieren
+role: test
+syntax: zmk
+created: 20250430111422
+modified: 20250430114517
+
+**Ziel:** Überprüfen, ob eine Excel-Tabelle korrekt in eine Markdown-Tabelle umgewandelt wird.
+
+**Voraussetzung:**
+- Der Zettelstore ist geöffnet.
+- Eine vorbereitete Excel-Datei mit dem Namen `test_tabelle.xlsx` liegt lokal bereit und enthält:
+
+| Name  | Alter | Stadt    |
+|-------|-------|----------|
+| Max   | 25    | Berlin   |
+| Lisa  | 30    | Hamburg  |
+| Tarek | 22    | München  |
+
+**Testschritte:**
+
+1. Öffne den Zettelstore und erstelle einen neuen Zettel.
+2. Klicke auf "Datei importieren" oder das entsprechende Import-Menü.
+3. Wähle die Datei `test_tabelle.xlsx` aus.
+4. Beobachte, ob automatisch eine Tabelle im Markdown-Format in das Textfeld eingefügt wurde.
+
+**Erwartetes Ergebnis:**
+Im Zettel steht:
+| Name  | Alter | Stadt    |
+|-------|-------|----------|
+| Max   | 25    | Berlin   |
+| Lisa  | 30    | Hamburg  |
+| Tarek | 22    | München  |
