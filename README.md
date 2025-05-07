@@ -13,7 +13,7 @@ This project is licensed under the European Union Public Licence 1.2 (EUPL-1.2).
 
 - HTML, CSS, HTML Dateien, CSS Dateien, Javascript Dateien - kebab-case: 
   my-variable-name
-- Python, Python Dateien - snake_case: my_variable_name
+- Python, Python Dateien, Folder - snake_case: my_variable_name
 - Konstanten - Screaming Snake Case: SCREAMING_SNAKE_CASE
 - Javascript - camelCase: myVariableName
 
