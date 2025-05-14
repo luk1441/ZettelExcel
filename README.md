@@ -9,6 +9,10 @@ This project is licensed under the European Union Public Licence 1.2 (EUPL-1.2).
 - Kommentare - Deutsch
 - Website Sprache - Deutsch
 
+### Start der CMD App 
+
+In Root (ZettelExcel): python -m src.cmd.excel_to_zettel <zettel-nummer>
+
 ### Programmierung Benamung
 
 - HTML, CSS, HTML Dateien, CSS Dateien, Javascript Dateien - kebab-case: 
