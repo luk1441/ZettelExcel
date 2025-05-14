@@ -19,22 +19,22 @@ def get_zettel_content(zettel_id):
 
         # 5. Prüfen, ob die Anfrage erfolgreich war (Statuscode 200)
         if response.status_code == 200:
-            print("✅ Zettel erfolgreich abgerufen:\n")
+            print("Zettel erfolgreich abgerufen:\n")
             print(response.text)  # 6. Den Zettelinhalt anzeigen
             return response.text
 
         # 7. Fehlerbehandlung: Zettel nicht gefunden
         elif response.status_code == 404:
-            print("❌ Zettel mit dieser ID wurde nicht gefunden.")
+            print("Zettel mit dieser ID wurde nicht gefunden.")
 
         # 8. Andere Fehlercodes
         else:
-            print(f"❌ Fehler beim Abrufen: Statuscode {response.status_code}")
+            print(f"Fehler beim Abrufen: Statuscode {response.status_code}")
             print(response.text)
 
     except requests.exceptions.ConnectionError:
         # 9. Fehlerbehandlung: Verbindung zum Server nicht möglich
-        print("❌ Verbindung zum Zettelstore fehlgeschlagen. Läuft der Server?")
+        print("Verbindung zum Zettelstore fehlgeschlagen. Läuft der Server?")
 
 
 # 10. Test bzw. Einstiegspunkt für das Skript
