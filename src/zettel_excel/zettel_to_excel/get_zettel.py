@@ -8,7 +8,7 @@ def get_zettel_content(zettel_id):
     """
 
     # 2. Basis-URL des lokal laufenden Zettelstores (Standard-Port: 23123)
-    base_url = "http://localhost:23123/api/zettel/"
+    base_url = "http://localhost:23123/z/"
 
     # 3. Zusammensetzen der vollständigen URL mit der Zettel-ID
     url = f"{base_url}{zettel_id}"
