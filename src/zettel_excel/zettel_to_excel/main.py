@@ -1,2 +1,2 @@
-def zettel_to_excel():
-    return "WORLD"
+def zettel_to_excel(zettel_id: str):
+    return zettel_id
