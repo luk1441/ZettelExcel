@@ -11,7 +11,7 @@ This project is licensed under the European Union Public Licence 1.2 (EUPL-1.2).
 
 ### Start der CMD App 
 
-In Root (ZettelExcel): python -m src.cmd.excel_to_zettel <zettel-nummer>
+In Root (ZettelExcel): python -m src.cmd.zettel_to_excel <zettel-nummer>
 
 ### Programmierung Benamung
 
