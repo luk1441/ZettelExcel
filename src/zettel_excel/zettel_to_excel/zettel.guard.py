@@ -26,3 +26,4 @@ if __name__ == "_main_":
     # Führt die Funktion run_zettelnummer_check aus,
     # wenn das Skript direkt gestartet wird.
     run_zettelnummer_check()
+
