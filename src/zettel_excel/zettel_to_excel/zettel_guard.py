@@ -6,7 +6,7 @@ def validate_zettelnummer(zettelnummer: str) -> bool:
     if not zettelnummer.isdigit():
         print("Fehler: Die Zettelnummer darf nur Ziffern enthalten.")
         return False
-    if len(zettelnummer) != 16:
+    if len(zettelnummer) != 14:
         print("Fehler: Die Zettelnummer muss genau 16 Stellen lang sein.")
         return False
     return True

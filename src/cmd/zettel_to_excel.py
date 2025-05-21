@@ -4,7 +4,7 @@ import re
 
 def is_valid_zettelnummer(zettelnummer: str) -> bool:
 # Entfernt alle nicht-numerischen Zeichen und prüft, ob genau 16 Ziffern übrig bleiben
-    return bool(re.fullmatch(r"\d{16}", zettelnummer))
+    return bool(re.fullmatch(r"\d{14}", zettelnummer))
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
