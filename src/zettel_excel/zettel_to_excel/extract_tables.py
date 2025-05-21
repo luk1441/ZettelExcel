@@ -1,4 +1,4 @@
-def extrahiere_tabellen(block_content):
+def extract_tables(block_content):
 
     tabellen_liste = []
 
@@ -35,7 +35,7 @@ test_content_nested = [
 
 # Funktion aufrufen und Ergebnisse ausgeben
 print("Einfache Tabelle:")
-print(extrahiere_tabellen(test_content))
+print(extract_tables(test_content))
 
 print("\nVerschachtelte Tabelle:")
-print(extrahiere_tabellen(test_content_nested))
+print(extract_tables(test_content_nested))
