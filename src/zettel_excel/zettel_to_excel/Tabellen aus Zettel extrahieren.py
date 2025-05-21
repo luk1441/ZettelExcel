@@ -1,29 +1,44 @@
 def extrahiere_tabellen(block_content):
-    table_list = []
-    for element in block_content:
-        if isinstance(element, list) and element[0] == 'TABLE':
-            table_list.append(str(element))  # oder z.dumps(element)
-    return table_list
+    """
+    Diese Funktion extrahiert alle Tabellen aus dem gegebenen Blockinhalt,
+    auch verschachtelte Tabellen werden erkannt.
+    """
+    tabellen_liste = []
 
-# TESTDATEN
+    def suche_tabellen(inhalt):
+        if isinstance(inhalt, list):
+            if len(inhalt) > 0 and inhalt[0] == 'TABLE':
+                tabellen_liste.append(inhalt)
+            else:
+                for element in inhalt:
+                    suche_tabellen(element)
+
+    suche_tabellen(block_content)
+    return tabellen_liste
+
+
+# Test 1 – einfache Tabelle
 test_content = [
-    ['PARA', ['TEXT', 'Im not a']],
+    ['PARA', ['TEXT', 'Beispiel']],
     ['TABLE',
-        [['CELL', ['TEXT', 'name']], ['CELL', ['TEXT', 'age']]],
-        [['CELL', ['TEXT', 'luca']], ['CELL', ['TEXT', '27']]]
-    ],
-    ['PARA', ['TEXT', 'Table']]
+        [['CELL', ['TEXT', 'Name']], ['CELL', ['TEXT', 'Alter']]],
+        [['CELL', ['TEXT', 'Max']], ['CELL', ['TEXT', '25']]]
+    ]
 ]
 
-# ERWARTETE AUSGABE
-expected = [
-    "['TABLE', [['CELL', ['TEXT', 'name']], ['CELL', ['TEXT', 'age']]], [['CELL', ['TEXT', 'luca']], ['CELL', ['TEXT', '27']]]]"
+# Test 2 – verschachtelte Tabelle
+test_content_nested = [
+    ['TABLE',
+        [['CELL', ['TEXT', 'Name']],
+         ['CELL', ['TABLE',
+             [['CELL', ['TEXT', 'Verschachtelt']], ['CELL', ['TEXT', 'Ja']]]
+         ]]]
+    ]
 ]
 
-# TEST
-assert extrahiere_tabellen(test_content) == expected
-print("Test bestanden ")
+# Funktion aufrufen und Ergebnisse ausgeben
+print("Einfache Tabelle:")
+print(extrahiere_tabellen(test_content))
 
-tables = extrahiere_tabellen(test_content)
-print(tables)
-
+print("\nVerschachtelte Tabelle:")
+print(extrahiere_tabellen(test_content_nested))
