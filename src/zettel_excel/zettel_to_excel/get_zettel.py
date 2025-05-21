@@ -10,7 +10,7 @@ def get_zettel(zettel_id):
     base_url = "http://localhost:23123/z/"
 
     # 3. Zusammensetzen der vollständigen URL mit der Zettel-ID
-    url = f"{base_url}{zettel_id}"
+    url = f"{base_url}{zettel_id}?enc=sz&parseonly"
 
     try:
         # 4. HTTP-GET-Anfrage an die API senden
@@ -22,4 +22,3 @@ def get_zettel(zettel_id):
         # 5. Fehlerbehandlung: Verbindung zum Server nicht möglich
         connection_error = "Verbindung zum Zettelstore fehlgeschlagen. Läuft der Server?"
         return connection_error
-
