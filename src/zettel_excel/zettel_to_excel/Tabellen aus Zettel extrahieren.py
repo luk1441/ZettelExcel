@@ -1,8 +1,5 @@
 def extrahiere_tabellen(block_content):
-    """
-    Diese Funktion extrahiert alle Tabellen aus dem gegebenen Blockinhalt,
-    auch verschachtelte Tabellen werden erkannt.
-    """
+
     tabellen_liste = []
 
     def suche_tabellen(inhalt):
