@@ -12,3 +12,6 @@ def delete_tables(zettelnummer, daten):
             os.remove(dateiname)
 
 
+
+
+
