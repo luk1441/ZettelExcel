@@ -50,6 +50,6 @@ def save_to_zettelstore(zettelnummer, daten):
 
 # Beispielaufruf:
 if __name__ == "__main__":
-    zettelnummer = "1234567890123456"
+    zettelnummer = "1234567890123455"
     daten = {}
     process_zettel(zettelnummer, daten)
