@@ -30,3 +30,4 @@ def update_all_modified_zettel_from_folder(folder_path):
             else:
                 print(f"Fehler bei Zettel {zettelnummer}: {response.status_code}")
                 print(response.text)
+
