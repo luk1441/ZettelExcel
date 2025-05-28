@@ -13,6 +13,11 @@ if __name__ == '__main__':
 
 zettel_id_input = sys.argv[1].strip()
 
+# Zusätzliche Prüfung auf unerlaubte Zeichen
+if re.search(r"[^\d]", zettel_id_input):
+    print("Fehler: Die Zettelnummer darf nur Ziffern (0–9) enthalten, keine Buchstaben oder Sonderzeichen.")
+    sys.exit(1)
+
 if not is_valid_zettelnummer(zettel_id_input):
     print("Fehler: Ungültige Zettelnummer. Eine Zettelnummer muss genau 16 Ziffern enthalten.")
     sys.exit(1)
