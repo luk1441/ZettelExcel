@@ -8,7 +8,7 @@ def is_valid_zettelnummer(zettelnummer: str) -> bool:
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        print("Fehler: Bitte geben Sie eine Zettelnummer als Argument ein.")
+        print("Fehler: Bitte geben eine Zettelnummer ein.")
         sys.exit(1)
 
 zettel_id_input = sys.argv[1].strip()
