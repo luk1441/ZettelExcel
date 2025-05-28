@@ -39,7 +39,7 @@ def read_excel_tables(zettel_id: str) -> dict[str, list[list]]:
 def main():
     # Prüfe, ob eine Zettel-ID als Argument übergeben wurde
     if len(sys.argv) != 2:
-        print("Bitte Zettel-ID angeben. Beispiel: python script.py 1234")
+        print("Bitte Zettel-ID angeben.")
         return
 
     zettel_id = sys.argv[1]
