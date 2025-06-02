@@ -19,4 +19,5 @@ def zettel_to_excel(zettel_id: str) -> dict:
         return { "value": None, "error": err }
     except Exception as e:
         logging.error(f"Unerwarteter Fehler: {e}", exc_info=True)
-        return { "value": None, "error": "Unerwarteter Programmfehler"}
+        return { "value": None, "error": "Unerwarteter Programmfehler. Bitte "
+                                         "kontaktieren Sie den Support." }
