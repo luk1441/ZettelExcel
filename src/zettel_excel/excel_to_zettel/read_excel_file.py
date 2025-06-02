@@ -2,7 +2,7 @@ import sys
 import os
 import pandas as pd
 
-def read_excel_tables(zettel_id: str) -> dict[str, list[list]]:
+def read_excel_file(zettel_id: str) -> dict[str, list[list]]:
     # Erstelle den Pfad zur Excel-Datei im "excel"-Ordner
     filename = os.path.join("excel", f"{zettel_id}.xlsx")
 
@@ -43,7 +43,7 @@ def main():
         return
 
     zettel_id = sys.argv[1]
-    tables = read_excel_tables(zettel_id)
+    tables = read_excel_file(zettel_id)
 
     if tables is None:
         print("Tabellen konnten nicht eingelesen werden.")
