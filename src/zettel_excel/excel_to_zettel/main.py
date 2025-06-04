@@ -1,9 +1,20 @@
-from src.zettel_excel.excel_to_zettel."""??? Filename ändern. kein Punkt"""
-from src.zettel_excel.excel_to_zettel.sz_to_zettel import embed_table_in_zettel
-from src.zettel_excel.excel_to_zettel.convert_to_sz import to_sz_table
+import logging
 
-def excel_to_zettel():
-    table = read_excel.file.py(zettel_id:str)
-    sz_table = to_sz_table(table)
-    zettel = embed_table_in_zettel(sz_table)
-    return zettel
+from src.zettel_excel.excel_to_zettel.read_excel_file import read_excel_file
+
+from src.zettel_excel.shared.validate_zettel_id import validate_zettel_id
+
+
+def excel_to_zettel(zettel_id: str) -> dict:
+    try:    
+        validate_zettel_id(zettel_id)
+        excel_tables = read_excel_file(zettel_id)
+        encoded_tables = encode_excel_tables(excel_tables)
+        message = write_tables_into_zettel_store(zettel_id, encoded_tables)
+        return { "value": message, "error": None }
+    except ValueError as err:
+        return { "value": None, "error": err }
+    except Exception as e:
+        logging.error(f"Unerwarteter Fehler: {e}", exc_info=True)
+        return { "value": None, "error": "Unerwarteter Programmfehler. Bitte "
+                                         "kontaktieren Sie den Support." }
