@@ -1,5 +1,33 @@
 # ZettelExcel
 
+# Installationsanleitung
+1. Schritt: Klonen des Projekts
+git clone https://github.com/luk1441/ZettelExcel.git
+cd zettelexcel
+
+2. Installation von Microsoft Office 365
+https://www.microsoft.com/de-de/microsoft-365/download-office
+
+3. Installation von Python (falls nicht vorhanden):
+Lade Python herunter von https://www.python.org/downloads/.
+Aktiviere "Add Python to PATH" während der Installation.
+Überprüfe die Installation mit: python --version
+
+4. Schritt: Erstellung einer virtuellen Umgebung
+python -m venv gruppe08
+
+5. Schritt: Aktivieren der virtuellen Umgebung (Windows)
+.\gruppe08\Scripts\activate
+
+6. Schritt: Installieren der Abhängigkeiten
+pip install -r requirements.txt 
+7. Schritt: Zettelstore.exe auf dem Rechner starten 
+8. Schritt: Anwendung starten (Tabellen aus Zettel in Excel übertragen)
+python -m src.cmd.zettel_to_excel (Zettelnummer eintragen)
+9. Schritt: Excel-Datei öffnen und in Excel bearbeiten
+10. Schritt: Anwendung starten (Excel-Datei in einen Zettel übertragen)
+python -m src.cmd.excel_to_zettel (Zettelnummer eintragen)
+
 ## License
 This project is licensed under the European Union Public Licence 1.2 (EUPL-1.2). See the [LICENSE](LICENSE) file for details.
 
