@@ -11,8 +11,8 @@ from src.zettel_excel.shared.validate_zettel_id import validate_zettel_id
 def zettel_to_excel(zettel_id: str) -> dict:
     try:
         validate_zettel_id(zettel_id)
-        zettel = get_zettel(zettel_id)
-        encoded_tables = extract_tables(zettel)
+        zettel_content = get_zettel(zettel_id)
+        encoded_tables = extract_tables(zettel_content)
         tables = parse_tables(encoded_tables)
         message = write_tables_into_excel(zettel_id, tables)
         return { "value": message, "error": None }

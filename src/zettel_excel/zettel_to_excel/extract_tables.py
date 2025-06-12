@@ -1,41 +1,19 @@
-def extract_tables(block_content):
+def extract_tables(zettel_content: str) -> list[str]:
+    tables = []
+    depth_count = 0
+    start_index = -1
 
-    tabellen_liste = []
-
-    def suche_tabellen(inhalt):
-        if isinstance(inhalt, list):
-            if len(inhalt) > 0 and inhalt[0] == 'TABLE':
-                tabellen_liste.append(inhalt)
-            else:
-                for element in inhalt:
-                    suche_tabellen(element)
-
-    suche_tabellen(block_content)
-    return tabellen_liste
-
-
-# Test 1 – einfache Tabelle
-test_content = [
-    ['PARA', ['TEXT', 'Beispiel']],
-    ['TABLE',
-        [['CELL', ['TEXT', 'Name']], ['CELL', ['TEXT', 'Alter']]],
-        [['CELL', ['TEXT', 'Max']], ['CELL', ['TEXT', '25']]]
-    ]
-]
-
-# Test 2 – verschachtelte Tabelle
-test_content_nested = [
-    ['TABLE',
-        [['CELL', ['TEXT', 'Name']],
-         ['CELL', ['TABLE',
-             [['CELL', ['TEXT', 'Verschachtelt']], ['CELL', ['TEXT', 'Ja']]]
-         ]]]
-    ]
-]
-
-# Funktion aufrufen und Ergebnisse ausgeben
-print("Einfache Tabelle:")
-print(extract_tables(test_content))
-
-print("\nVerschachtelte Tabelle:")
-print(extract_tables(test_content_nested))
+    for i, char in enumerate(zettel_content):
+        if char == '(' and zettel_content[i:i + 7] == '(TABLE ':
+            start_index = i
+            depth_count += 1
+        elif char == '(':
+            if depth_count != 0:
+                depth_count += 1
+        elif char == ')':
+            if depth_count != 0:
+                depth_count -= 1
+            if start_index != -1 and depth_count == 0:
+                tables.append(zettel_content[start_index:i + 1])
+                start_index = -1
+    return tables
