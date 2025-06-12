@@ -12,6 +12,6 @@ def write_tables_into_excel(zettel_id: str, tables: list[pd.DataFrame]) -> str:
             table.to_excel(writer, sheet_name=f"Tabelle {i+1}", index=False,
                            header=False)
 
-    return f"{zettel_id}.xlsx wurde erfolgreich erstellt."
+    return f"Datei '{zettel_id}.xlsx' wurde erfolgreich erstellt."
 
 
