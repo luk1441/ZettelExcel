@@ -1,11 +1,11 @@
 import pandas as pd
 
 
-def encode_tables(tables: list[pd.DataFrame]) -> list[str]:
+def encode_tables(tables: list[pd.DataFrame]) -> str:
     encoded_tables = []
     for table in tables:
         encoded_tables.append(f"(TABLE {encode_rows(table)})")
-    return encoded_tables
+    return " ".join(encoded_tables)
 
 def encode_rows(table: pd.DataFrame) -> str:
     encoded_rows = []
