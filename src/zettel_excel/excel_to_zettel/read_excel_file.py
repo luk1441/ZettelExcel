@@ -10,7 +10,7 @@ def read_excel_file(zettel_id: str) -> list[pd.DataFrame]:
 
     try:
         excel_data = pd.read_excel(filename, sheet_name=None, header=None)
-        return list(excel_data.values())
+        return [df for df in excel_data.values() if not df.empty]
 
     except Exception:
         raise ValueError(f"Fehler beim Einlesen der Datei '{filename}.xlsx'")
