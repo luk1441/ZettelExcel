@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import requests
 
-def update_all_modified_zettel_from_folder(folder_path):
+def write_tables_into_zettel_store(zettel_id: str, folder_path):
     for filename in os.listdir(folder_path):
         if filename.startswith("zettel_") and filename.endswith(".xlsx"):
             # Zettelnummer aus Dateinamen extrahieren

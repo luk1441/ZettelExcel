@@ -1,6 +1,8 @@
 import logging
 
+from src.zettel_excel.excel_to_zettel.encode_excel_tables import encode_excel_tables
 from src.zettel_excel.excel_to_zettel.read_excel_file import read_excel_file
+from src.zettel_excel.excel_to_zettel.write_tables_into_zettel_store import write_tables_into_zettel_store
 
 from src.zettel_excel.shared.validate_zettel_id import validate_zettel_id
 

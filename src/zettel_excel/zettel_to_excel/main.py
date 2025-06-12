@@ -14,7 +14,7 @@ def zettel_to_excel(zettel_id: str) -> dict:
         zettel = get_zettel(zettel_id)
         encoded_tables = extract_tables(zettel)
         tables = parse_tables(encoded_tables)
-        message = write_tables_into_excel(zettel_id, tables) 
+        message = write_tables_into_excel(zettel_id, tables)
         return { "value": message, "error": None }
     except ValueError as err:
         return { "value": None, "error": err }

@@ -1,4 +1,4 @@
-def to_sz_table(table_data: list[list[str]]) -> str:
+def encode_excel_tables(table_data: list[list[str]]) -> str:
     sz = "(TABLE\n"
     for row in table_data:
         sz += "  (ROW\n"
