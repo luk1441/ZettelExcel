@@ -21,4 +21,4 @@ def get_zettel(zettel_id):
     except requests.exceptions.ConnectionError:
         # 5. Fehlerbehandlung: Verbindung zum Server nicht möglich
         connection_error = "Verbindung zum Zettelstore fehlgeschlagen. Läuft der Server?"
-        return connection_error
+        raise ValueError(connection_error)
